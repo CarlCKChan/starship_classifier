@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Starship Series Predictor</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+  </head>
+  <body>
+    <header>
+        <h1>Predict where a starship is from a image</h1>
+        <p>Model developed <a href="https://www.kaggle.com/carlckchan/fast-ai-lesson-1-self-vision-trek-wars-ds">as a project while taking the fastai course</a> and api hosted by <a href="https://huggingface.co/spaces/CCKC/fastai_st_sw_ds_ship_classifier" target="_blank">hugging face</a>
+        </p>
+        <a href="https://github.com/CarlCKChan/starship_classifier" target="_blank">Github Repo</a>
+    </header>
+    <main>
+        <header>
+            <h2>Submit a picture of a starship</h2>
+            <h3>Currently supports Star Trek Federation, Star Wars Empire, and Dead Space</h2>
+            <p id="prediction"></p>
+            <p id="confidences"></p>
+            <p id="error"></p>
+        </header>
+        <section>
+            <img id="myImage" height="400" width="400">
+            <form id="form">
+                <label for="fileInput"></label>
+                <input id="fileInput" type="file" onchange="onFileSelected(event)" name="File">
+            </form>
+        </section>
+    </main>
+	<script src="index.js"></script>
+  </body>
+</html>
